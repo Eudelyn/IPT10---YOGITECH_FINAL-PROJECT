@@ -1,0 +1,132 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="payments" directorySegmentName="seg_0" id="03271FA2-463E-6CC9-2475-C9B3251FD4D0">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="checkout_ref" id="054CD6D8-D6E2-690C-6FFD-5AF9C7D8351F">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="gateway_ref" id="0AE33082-875E-058D-4AB0-D105F8870156">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="buyer_id" id="1134AE0A-5B1A-8D76-BB30-C2333A5F35B8">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="gateway" id="37562B6A-A43D-C025-E1AF-506087AE92B2">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="public_id" id="61BE3B0C-D658-8F31-0C97-D7EE47A75C51">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="amount" id="6F1A8F9A-F793-0486-7D20-2C8CCD7E155D">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="payer" id="77352AEB-E4A6-2130-571D-4FAA4EB8AC3F">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="created_at" id="7D3011A4-F653-8F7E-83CB-11D1914943F9">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<defaultValue>CURRENT_TIMESTAMP</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="paid_at" id="ACFBB284-F273-84AC-6997-74C3C2F70E7A">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="status" id="B008807F-738F-CAB7-C36A-94F9DD18480A">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<defaultValue>&apos;pending&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="method" id="C6CCEF3E-3EBC-C92F-8FB7-0ADFE879D465">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id" id="D6FBA5CB-1FAF-28A1-E896-2C95B8398198">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="failure" id="E2FEC5A1-C6C2-E0CE-8356-BDB63FFF9939">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="ix_payments_buyer" id="72C968AF-0C4E-C253-EC61-0918C62CCABD">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<logging></logging>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="ix_payments_checkout" id="7DF77E23-D6DD-21BC-41B6-9E42A55E6FC6">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<logging></logging>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="buyers_make_payments" id="5B9C40EF-D949-F471-D4AF-12CCE4E2D46E">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="payments_pk" id="6DEDD8DC-4A4B-AA3B-F1ED-B809835FAE77">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="payments_status_ck" id="84781CBB-5F4C-A517-AAC4-9522A63680BD">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<nameChanged>true</nameChanged>
+</TableCheckConstraint>
+<TableCheckConstraint name="payments_method_ck" id="ADD4E636-DF3C-7397-9B0B-DF4A51111488">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<nameChanged>true</nameChanged>
+</TableCheckConstraint>
+</tableCheckConstraints>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="payments_public_id_uk" id="5E94D676-2533-414F-D5F5-E70C072F5289">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev12c>

@@ -1,0 +1,360 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="yogitech_Domains">
+<domains>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_100 CHAR" id="0730FACF-E807-ACAE-8206-CD91831161F0">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_40 CHAR" id="074D69D3-C01D-FD2B-5F25-423B400CA087">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>40 CHAR</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_80 CHAR" id="08493501-FC3C-AB1F-63BB-EC3D352F0D5E">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>80 CHAR</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_255 CHAR" id="0955E3BE-991E-7557-A1F8-0ED8B75D9D05">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_3_0_0" id="0A8340CC-B3F8-A86F-7F83-32EF48F188A6">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>0</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT019</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_120 CHAR" id="100C7456-5959-398C-51B8-0AACDBECAD42">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>120 CHAR</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_45 CHAR" id="23520B63-5B24-ADD2-4176-FEF014AF8126">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>45 CHAR</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_3_2_0" id="24A91136-DC41-6927-3335-CA17CB2E952F">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<dataTypeSize>0</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT019</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_1000 CHAR" id="251F726A-4B73-8A25-C875-49C85A6FDA03">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>1000 CHAR</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_10_0_0" id="3F1736F2-BE10-40EE-391A-A6BD71DF2044">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>0</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT019</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_8 CHAR" id="44DEF5D2-3A7D-497C-F679-E6C2320F43AC">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>8 CHAR</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Date_0_0_0" id="47DC337E-A4C6-3EF3-A92D-4C1FAC280669">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT007</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="CHAR_0_0_64 CHAR" id="57CD5B60-2901-3286-FF64-1329B8166619">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>64 CHAR</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT025</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_180 CHAR" id="5A0DDA38-E496-B0A3-5A33-AB05351F347E">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>180 CHAR</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_20 CHAR" id="5E3A3296-B746-A890-E80B-8F736A69F1CE">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_5 CHAR" id="5FDDECD4-5A78-FAEC-29AC-6223ED5C50AB">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_60 CHAR" id="67016A76-0EF8-DC9E-3688-0B3E9CA062F5">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>60 CHAR</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_6 CHAR" id="6B08EA30-AA4F-F996-CF97-757BCA9C2B10">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>6 CHAR</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Timestamp_6_0_0" id="78053FFF-7134-D508-B118-0EAE672262F9">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>6</dataTypePrecision>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT015</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_1_0_0" id="780B2B83-5BAB-877B-71A9-EF549E23B23A">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>1</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>0</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT019</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_16 CHAR" id="8FE7A03C-ECDE-E475-FB3C-D4DD0009D2F5">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>16 CHAR</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_10_2_0" id="96074EB7-6ADF-CB75-9671-8461F7AA7D6C">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<dataTypeSize>0</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT019</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="CLOB_0_0_0" id="9FD168B1-3DFD-2921-4E91-5CB57527A050">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT028</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_9 CHAR" id="B44B9A79-45E9-80A2-269F-412C4AF01BFC">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>9 CHAR</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_190 CHAR" id="C801E1D8-A88F-B020-BC50-C2FDEA42E109">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>190 CHAR</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_11_0_0" id="C81BA4FC-ECFA-1F30-7DBB-12850984ABE4">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>0</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT019</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_10 CHAR" id="C9B1C4EF-5FDF-BD12-ADC8-C9996A3B9E2A">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_500 CHAR" id="D633A5A6-348D-82AC-E2C9-9E7646128DF0">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>500 CHAR</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_12_2_0" id="D89D966A-9FB2-AC82-D8C4-438DBE3DDE63">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>12</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<dataTypeSize>0</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT019</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="CHAR_0_0_24 CHAR" id="DA9A4305-ED93-DF2A-4EAE-6D04D39EA1E5">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>24 CHAR</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT025</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_160 CHAR" id="FBBF4D62-C6BB-52EC-1FBB-1196A2726537">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>160 CHAR</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_5_0_0" id="FE249F74-360D-BB33-E164-DD91713A2B65">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>0</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT019</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_30 CHAR" id="FE3745F8-D38C-9BCA-9B29-A9B4EE345059">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<fileName>yogitech_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+</domains>
+</DomainFile>

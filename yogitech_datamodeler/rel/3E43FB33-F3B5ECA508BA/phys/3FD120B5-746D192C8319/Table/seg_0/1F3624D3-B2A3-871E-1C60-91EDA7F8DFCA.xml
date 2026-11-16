@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="email_logs" directorySegmentName="seg_0" id="1F3624D3-B2A3-871E-1C60-91EDA7F8DFCA">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="driver" id="257E5681-F7A7-6399-0533-4E25BFA96DB7">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="error" id="4089D8CF-99DB-25AD-D8CB-E306EC3CFA4C">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="type" id="5E8909E4-BFBF-2058-6E32-75EAF5482FEE">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="created_at" id="680DE2C7-F7A6-0F67-0F38-7B3AE29F77FF">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<defaultValue>CURRENT_TIMESTAMP</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="id" id="74F7B638-1053-5BC3-E0D4-5C501260BF5E">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="status" id="75CC2669-7A0E-D3F0-5575-C425B4149378">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="subject" id="91732DED-5492-20BC-2D36-6CE095FF269E">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="to_email" id="BACFE3C8-5EB0-1982-7E1D-249D3E5D00A6">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="order_id" id="E2DF34A7-8B2A-C3A1-E715-03402DE33F3D">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="user_id" id="E512EC50-7C50-CF45-A219-F21A2505A5C2">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="ix_email_logs_user" id="4BDC9196-B3CA-8638-FAFF-0B600C281170">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<logging></logging>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="ix_email_logs_order" id="93ED19ED-84A7-D1CD-0588-B6426C786840">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<logging></logging>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="users_receive_email_logs" id="D9F161EA-F7C8-14A6-2C6B-646FEDC81459">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="orders_have_email_logs" id="FFA2EAD5-0877-B5D5-0890-DC84AA65D227">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="email_logs_pk" id="79994178-A432-2603-7071-F0C9DE2F6344">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="email_logs_status_ck" id="3230823C-A495-E475-8ED2-D97489599D28">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<nameChanged>true</nameChanged>
+</TableCheckConstraint>
+</tableCheckConstraints>
+</TableProxyOraclev12c>

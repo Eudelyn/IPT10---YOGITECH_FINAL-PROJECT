@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B872472B-E001-585A-B5CA-13D28F264A4C" name="migrations">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:21:58 UTC</createdTime>
+<generatorID>449F5E08-638B-7605-5401-592BF67EE1AD</generatorID>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<engineerTo>
+<item key="3E43FB33-1817-8B84-5AA8-F3B5ECA508BA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="CC1D429C-6CC0-02AC-8F73-4F03B7285245">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:21:58 UTC</createdTime>
+<generatorID>7C728582-5D69-11C8-E579-54B2F9778934</generatorID>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<engineerTo>
+<item key="3E43FB33-1817-8B84-5AA8-F3B5ECA508BA" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C81BA4FC-ECFA-1F30-7DBB-12850984ABE4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="migration" id="FAE344FB-C856-047B-61BB-D80570278EF1">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:21:58 UTC</createdTime>
+<generatorID>1C55FB45-8C42-35DA-B1D8-9C2B4D9E94FF</generatorID>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<engineerTo>
+<item key="3E43FB33-1817-8B84-5AA8-F3B5ECA508BA" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>C801E1D8-A88F-B020-BC50-C2FDEA42E109</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ran at" id="65EC770D-780F-4F64-6057-3C2AA2358E5E">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:21:58 UTC</createdTime>
+<generatorID>44D10018-6AE4-6436-E4D3-B8DF8F97EECE</generatorID>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<engineerTo>
+<item key="3E43FB33-1817-8B84-5AA8-F3B5ECA508BA" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>78053FFF-7134-D508-B118-0EAE672262F9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B6635AA8-B8AA-E307-B96B-B7B14CA62540" name="migrations pk">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:21:58 UTC</createdTime>
+<generatorID>A4ABF46E-46D9-AFE5-F22B-48D2361A5581</generatorID>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<engineerTo>
+<item key="3E43FB33-1817-8B84-5AA8-F3B5ECA508BA" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CC1D429C-6CC0-02AC-8F73-4F03B7285245</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="5F9AEA29-C3D0-1F3F-FDD7-CCDFC2C3B963" name="migrations migration uk">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:21:58 UTC</createdTime>
+<generatorID>99BFB171-E96E-6EE3-B6D9-126CBD11F248</generatorID>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<engineerTo>
+<item key="3E43FB33-1817-8B84-5AA8-F3B5ECA508BA" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>FAE344FB-C856-047B-61BB-D80570278EF1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

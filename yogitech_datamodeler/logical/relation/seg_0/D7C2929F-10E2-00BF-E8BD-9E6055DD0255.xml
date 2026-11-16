@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="sellers fulfill orders" directorySegmentName="seg_0" id="D7C2929F-10E2-00BF-E8BD-9E6055DD0255">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:21:58 UTC</createdTime>
+<generatorID>C0DD2244-DDAE-909A-0A5A-407E6AAA2976</generatorID>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<engineerTo>
+<item key="3E43FB33-1817-8B84-5AA8-F3B5ECA508BA" value="true"/>
+</engineerTo>
+<sourcePk>B60EE269-0D7D-A81B-A1B1-5A81BDF36166</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>FDE5FE0D-DA9A-89E3-85D9-8815FC949435</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>55870812-3277-1D88-1CD9-9CBBE9A74035</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>

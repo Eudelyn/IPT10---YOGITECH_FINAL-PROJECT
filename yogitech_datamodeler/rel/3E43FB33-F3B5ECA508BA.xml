@@ -1,0 +1,25 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="3E43FB33-1817-8B84-5AA8-F3B5ECA508BA" mainViewID="4AF672DE-A980-8C7D-8400-69633E789795">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:03 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>3FD120B5-9F4E-6278-D5E2-746D192C8319</selectedRDBMSSite>
+<importDDLFileStamps>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>yogitech.ddl</fileName>
+<pathName>C:\Users\Eudelyn\Downloads</pathName>
+<dbType>11</dbType>
+</importDDLFileStamp>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>yogitech-simple.ddl</fileName>
+<pathName>C:\Users\Eudelyn\Downloads</pathName>
+<dbType>11</dbType>
+</importDDLFileStamp>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>Yogitech (1).ddl</fileName>
+<pathName>C:\Users\Eudelyn\Downloads</pathName>
+<dbType>11</dbType>
+</importDDLFileStamp>
+</importDDLFileStamps>
+</relationalModel>

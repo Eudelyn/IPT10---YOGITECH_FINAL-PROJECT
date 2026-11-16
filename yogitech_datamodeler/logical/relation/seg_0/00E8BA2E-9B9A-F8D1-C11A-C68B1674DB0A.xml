@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="users have cart items" directorySegmentName="seg_0" id="00E8BA2E-9B9A-F8D1-C11A-C68B1674DB0A">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:21:58 UTC</createdTime>
+<generatorID>F7A66B29-8B97-DF24-5E06-C46611D46B5E</generatorID>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<engineerTo>
+<item key="3E43FB33-1817-8B84-5AA8-F3B5ECA508BA" value="true"/>
+</engineerTo>
+<sourcePk>B60EE269-0D7D-A81B-A1B1-5A81BDF36166</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>FDE5FE0D-DA9A-89E3-85D9-8815FC949435</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>362B7315-004C-B5E7-F252-76F8CAF20332</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>

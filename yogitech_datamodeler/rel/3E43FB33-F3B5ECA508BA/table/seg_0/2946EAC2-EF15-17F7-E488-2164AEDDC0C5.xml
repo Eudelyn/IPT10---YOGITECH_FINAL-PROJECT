@@ -1,0 +1,174 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2946EAC2-EF15-17F7-E488-2164AEDDC0C5" name="order_items">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>56B2BB23-DA23-7125-F5E8-E4D77554C3A3</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="EED8F554-D4CB-DC99-AC92-DD7B4DC15B8B">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>C5CAD516-78C7-CD41-0D2A-CFFCC5DF886D</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3F1736F2-BE10-40EE-391A-A6BD71DF2044</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="order_id" id="979FFBFE-3EA0-6183-7B11-930A1ED74A3D">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>A99BD937-AA84-3157-3373-88B03C57B99E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3F1736F2-BE10-40EE-391A-A6BD71DF2044</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2886F052-0E5F-10F7-FAB6-39A936F34A33" referredColumn="D4BF91BD-D9D0-D9C6-2E7D-55D98FDDCC86"/>
+</associations>
+</Column>
+<Column name="product_id" id="E4388253-6869-BE3A-DA64-08416BE9C805">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>68C6AD41-F75E-C8FF-335A-F6CB1F28487B</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3F1736F2-BE10-40EE-391A-A6BD71DF2044</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EC0B41DF-64D5-D84D-6F64-CCD31476522F" referredColumn="BF3AAAFD-D054-B8AD-2603-E2613543CCC0"/>
+</associations>
+</Column>
+<Column name="product_name" id="6A68C1A7-30B8-3398-6CE3-736750394A36">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>CE19693E-25DA-E06F-3DCE-DE5FFBDC8269</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>5A0DDA38-E496-B0A3-5A33-AB05351F347E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="thumbnail" id="9B9348DB-4DA1-0E2F-784F-07756E79D4FF">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>D2B5FAE6-7D00-0AB1-7F88-8FF92330D39F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D633A5A6-348D-82AC-E2C9-9E7646128DF0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="unit_price" id="DA3A585E-7CC2-6A12-CBF2-20C26BEC6B7B">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>09B202C1-BEEA-0A67-244C-728EFB0F4E61</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>D89D966A-9FB2-AC82-D8C4-438DBE3DDE63</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="quantity" id="D996636D-312C-5D13-576E-694362BC0BFA">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>A1FCD767-A15D-5C4E-2AAE-C96F4248DD15</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>FE249F74-360D-BB33-E164-DD91713A2B65</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="line_total" id="1F0C9106-8B95-6992-4BF8-C282884918C2">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>FD9F4E9B-3C60-46DC-80EF-5994320C608B</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>D89D966A-9FB2-AC82-D8C4-438DBE3DDE63</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E6158310-5C9C-A62E-3C6F-CB78FD7A89CE" name="order_items_pk">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>8F839DCE-3036-6F9C-51E2-C681F60BA127</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EED8F554-D4CB-DC99-AC92-DD7B4DC15B8B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1EAAA610-EFB9-C610-BAAB-19155EF74519" name="ix_items_order">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>57B2AF65-8BDC-C6C6-6A9C-FF550ADB9146</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="979FFBFE-3EA0-6183-7B11-930A1ED74A3D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4650EDDD-16D1-4D3C-E24C-13D252EE9F1C" name="ix_items_product">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>676F3CE2-510A-F829-E387-45A522245079</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E4388253-6869-BE3A-DA64-08416BE9C805"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="06A70BF2-8444-2CC2-601D-BBD241E4F47F" name="orders_contain_order_items">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:48 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="979FFBFE-3EA0-6183-7B11-930A1ED74A3D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F498A01D-F69A-F333-9257-10C5DF6C4C8F" name="products_appear_in_order_items">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:48 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E4388253-6869-BE3A-DA64-08416BE9C805"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

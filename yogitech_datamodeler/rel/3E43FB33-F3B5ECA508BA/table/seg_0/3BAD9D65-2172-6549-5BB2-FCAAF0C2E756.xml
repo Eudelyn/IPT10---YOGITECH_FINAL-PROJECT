@@ -1,0 +1,178 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3BAD9D65-2172-6549-5BB2-FCAAF0C2E756" name="voucher_redemptions">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>2C2D5329-FE67-058E-0E53-B9C1C08DA8BC</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="09C6D51F-2B0B-77C7-1524-B7FF5D3B71CD">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>EA5391A0-F00D-3580-179D-CDBCA8F10B43</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3F1736F2-BE10-40EE-391A-A6BD71DF2044</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="voucher_id" id="0BE24041-9116-3575-CD72-ADC5CA21F1BB">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>D96F0FB5-EE5A-0EE0-8AA9-F5F59B51FFFB</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3F1736F2-BE10-40EE-391A-A6BD71DF2044</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E585BDA1-AFA3-616E-2A80-746EF0F991C9" referredColumn="F6FC0E33-BBDD-0547-2E36-D27ABEA3B89A"/>
+</associations>
+</Column>
+<Column name="user_id" id="FBFAF36C-F7E5-984C-FF6C-2F3E9D7126E0">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>95BA54EB-1784-3BF6-674A-CBEE6015F82D</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3F1736F2-BE10-40EE-391A-A6BD71DF2044</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B4F1AFB3-FAA8-40E5-080D-D2B8A991D723" referredColumn="6CC7AD09-9C84-C338-2766-140FF376FDFF"/>
+</associations>
+</Column>
+<Column name="checkout_ref" id="BB897ACF-23C0-7F0D-13D6-CB4590618C5C">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>64172BE2-B4BD-3E73-78DC-CAA7E5D0EF7F</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>FE3745F8-D38C-9BCA-9B29-A9B4EE345059</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="discount" id="DC3A6EEF-CE62-3247-E135-2214F1DE8E09">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>8EF4ACDD-6627-65A5-A441-8F3778AA87F7</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>96074EB7-6ADF-CB75-9671-8461F7AA7D6C</domain>
+<defaultValue>0.00</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="released_at" id="658839BA-767D-CEA5-60C4-B3550DEE108E">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>F32DC533-8F68-49B6-18F6-EBCF7D4BA3BC</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>78053FFF-7134-D508-B118-0EAE672262F9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="created_at" id="739F6BBE-6F4A-592A-6393-255E8D73692B">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>C6B83DAB-7B58-0036-DF27-A2DAD960F606</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>78053FFF-7134-D508-B118-0EAE672262F9</domain>
+<defaultValue>CURRENT_TIMESTAMP</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="12D0DA56-96DA-6AE8-98A9-DA28244AF7A3" name="voucher_redemptions_pk">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>16174616-9C8E-A309-FAB2-A8C184C15255</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="09C6D51F-2B0B-77C7-1524-B7FF5D3B71CD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2B47D624-BEB1-1F86-987D-31B964AB36B2" name="voucher_redemptions_ref_uk">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>FEEACA3C-54C2-D1D9-3FE4-405B6634EFD4</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BB897ACF-23C0-7F0D-13D6-CB4590618C5C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="989C07BC-83A3-97B1-1A86-B76CD5129249" name="ix_redemptions_voucher">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>3B91D465-B58E-5897-3EE0-A7A17C06493E</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0BE24041-9116-3575-CD72-ADC5CA21F1BB"/>
+<colUsage columnID="658839BA-767D-CEA5-60C4-B3550DEE108E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D1F3F5A1-14E5-3E75-3258-EF6809DE08C6" name="ix_redemptions_user">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>A8626BD1-88CF-8A9B-7779-17FE32154CFB</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FBFAF36C-F7E5-984C-FF6C-2F3E9D7126E0"/>
+<colUsage columnID="0BE24041-9116-3575-CD72-ADC5CA21F1BB"/>
+<colUsage columnID="658839BA-767D-CEA5-60C4-B3550DEE108E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4188CC39-D52B-F423-4CA4-92AEBB0607F7" name="users_redeem_vouchers">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:48 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FBFAF36C-F7E5-984C-FF6C-2F3E9D7126E0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7602E5BD-A778-C078-5B1F-786466B9E77E" name="vouchers_have_redemptions">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:48 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0BE24041-9116-3575-CD72-ADC5CA21F1BB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

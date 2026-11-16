@@ -1,0 +1,5 @@
+.git
+storage/logs/*
+storage/cache/*
+storage/mail/*
+node_modules

@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="categories group products" directorySegmentName="seg_0" id="E2C5165D-1D38-D152-BAF4-5F1FBA1997E5">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:21:58 UTC</createdTime>
+<generatorID>44E51746-A5B7-C296-BE5E-8EB78C491258</generatorID>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<engineerTo>
+<item key="3E43FB33-1817-8B84-5AA8-F3B5ECA508BA" value="true"/>
+</engineerTo>
+<sourcePk>C56067F8-0C30-920C-41B3-4D91597AFF6F</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>BD339176-2DC3-6A17-BEFE-513865EE9401</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>CDFFBE2E-A12B-2286-7337-2DD37E4922BA</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

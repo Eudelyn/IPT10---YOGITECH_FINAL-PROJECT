@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3E6943C6-4BB8-986E-6657-7EACBF01BB10" containerWithKeyObject="AA983259-055D-BE0D-4E85-3A1EBE53EF3A" localFKIndex="3AF446E4-EFBF-2F9D-4E71-5909C271F2E0" name="users_have_wishlists">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:48 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>62A4E24E-C734-FD56-5E89-A453EEB6EFC2</importedID>
+<referredTableLongName>users</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>9E05E323-D281-6976-878E-0B8BB5C65B18</referredTableID>
+<keyObject>AEE5BC5D-9E22-ED69-700C-BBF48F6E66BE</keyObject>
+<referredKeyID>AEE5BC5D-9E22-ED69-700C-BBF48F6E66BE</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

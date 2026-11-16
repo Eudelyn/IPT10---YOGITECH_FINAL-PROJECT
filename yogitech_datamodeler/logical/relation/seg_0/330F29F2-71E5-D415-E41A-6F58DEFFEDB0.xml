@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="orders have reviews" directorySegmentName="seg_0" id="330F29F2-71E5-D415-E41A-6F58DEFFEDB0">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:21:58 UTC</createdTime>
+<generatorID>9778369E-5792-AA75-8FC7-B68F09FF60DA</generatorID>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<engineerTo>
+<item key="3E43FB33-1817-8B84-5AA8-F3B5ECA508BA" value="true"/>
+</engineerTo>
+<sourcePk>EB11203B-71B6-8D3C-D327-C5C010946EDE</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>55870812-3277-1D88-1CD9-9CBBE9A74035</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>3D2CF02C-DB22-88CB-4606-FD687500C18B</targetEntity>
+<transferable>true</transferable>
+<deleteRule>SET NULL</deleteRule>
+</Relation>

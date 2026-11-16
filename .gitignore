@@ -1,0 +1,9 @@
+.env
+storage/logs/*
+storage/cache/*
+public/uploads/products/*
+!**/.gitkeep
+Downloads/
+storage/mail/*
+*.mp4
+*.exe

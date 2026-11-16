@@ -1,0 +1,61 @@
+# Yogitech on Docker: replaces XAMPP.
+#   Start:  docker compose up -d --build
+#   Site:   http://localhost:8080
+#   phpMyAdmin: http://localhost:8081  (user root, password root)
+services:
+  app:
+    build: .
+    container_name: yogitech-app
+    ports:
+      - "8080:80"
+    environment:
+      # These override the DB_ lines in .env (real environment variables win).
+      DB_HOST: db
+      DB_PORT: "3306"
+      DB_DATABASE: yogitech
+      DB_USERNAME: root
+      DB_PASSWORD: root
+      APP_BASE: ""
+      APP_URL: http://localhost:8080
+    volumes:
+      - ./:/var/www/html          # edit code on your PC, changes show immediately
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  db:
+    image: mariadb:11.4          # same database engine as XAMPP
+    container_name: yogitech-db
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: yogitech
+      TZ: Asia/Manila
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    ports:
+      - "3307:3306"               # for SQL Developer / Workbench: localhost:3307
+    volumes:
+      - dbdata:/var/lib/mysql     # data survives restarts
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+    restart: unless-stopped
+
+  phpmyadmin:
+    image: phpmyadmin:5
+    container_name: yogitech-pma
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: root
+      UPLOAD_LIMIT: 64M
+    depends_on:
+      - db
+    restart: unless-stopped
+
+volumes:
+  dbdata:

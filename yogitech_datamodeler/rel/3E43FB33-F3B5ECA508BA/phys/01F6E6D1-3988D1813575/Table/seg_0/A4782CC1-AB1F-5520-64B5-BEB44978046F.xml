@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="categories" directorySegmentName="seg_0" id="A4782CC1-AB1F-5520-64B5-BEB44978046F">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="api_slug" id="3A963B60-A1BF-2A26-98C3-FDE1DD27F86A">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="name" id="77368E06-C294-FFB5-844D-2E083338037C">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="icon" id="81997474-A57B-DEA6-DD45-217A81D5C449">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<defaultValue>&apos;chip&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="slug" id="96ED7BDE-1CA2-A438-2AF6-F8D64EB6A43B">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id" id="B1703127-A294-3554-66A8-9C7F75551FF2">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="description" id="C45B903F-EA8F-24CA-B2D1-57F053F250AB">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="sort_order" id="FFBCC2FC-F25A-944D-EC14-F368DF187075">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<defaultValue>0</defaultValue>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="categories_pk" id="D19BC036-BA5B-490F-4825-F748E01D58EA">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="categories_slug_uk" id="ECEC02FB-7393-6768-545A-236E1E83EC9A">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev12c>

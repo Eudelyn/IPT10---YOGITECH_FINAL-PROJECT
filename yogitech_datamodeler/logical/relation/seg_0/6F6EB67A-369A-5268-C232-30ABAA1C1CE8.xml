@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="orders have email logs" directorySegmentName="seg_0" id="6F6EB67A-369A-5268-C232-30ABAA1C1CE8">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:21:58 UTC</createdTime>
+<generatorID>26299BBA-15BF-D084-2AC8-401FCF4C3818</generatorID>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<engineerTo>
+<item key="3E43FB33-1817-8B84-5AA8-F3B5ECA508BA" value="true"/>
+</engineerTo>
+<sourcePk>EB11203B-71B6-8D3C-D327-C5C010946EDE</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>55870812-3277-1D88-1CD9-9CBBE9A74035</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>81DB1FBA-9C4D-80AE-A6F6-46FE1A9FD66C</targetEntity>
+<transferable>true</transferable>
+<deleteRule>SET NULL</deleteRule>
+</Relation>

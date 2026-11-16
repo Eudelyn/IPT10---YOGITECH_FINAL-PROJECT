@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F7CAF0E6-D013-37D4-C5E8-E7D3185EE7B7" containerWithKeyObject="A6D7B789-2382-2810-7675-486EB821BE91" localFKIndex="1BED20B4-1918-B952-CDA5-430C816D9C17" name="orders_have_shipment_events">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>4212BD94-259C-9BF7-84CE-E5E4EDC23C4B</importedID>
+<referredTableLongName>orders</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>8CD97621-3AC9-8FC2-8236-EE3A43133F0B</referredTableID>
+<keyObject>3D1C14BC-272F-F2B1-5EE0-8F0963576C9D</keyObject>
+<referredKeyID>3D1C14BC-272F-F2B1-5EE0-8F0963576C9D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

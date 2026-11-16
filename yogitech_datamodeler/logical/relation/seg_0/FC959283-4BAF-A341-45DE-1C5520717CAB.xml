@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="orders have shipment events" directorySegmentName="seg_0" id="FC959283-4BAF-A341-45DE-1C5520717CAB">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:21:58 UTC</createdTime>
+<generatorID>F7CAF0E6-D013-37D4-C5E8-E7D3185EE7B7</generatorID>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<engineerTo>
+<item key="3E43FB33-1817-8B84-5AA8-F3B5ECA508BA" value="true"/>
+</engineerTo>
+<sourcePk>EB11203B-71B6-8D3C-D327-C5C010946EDE</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>55870812-3277-1D88-1CD9-9CBBE9A74035</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>CC1311D4-1ECF-8ABA-6235-11162B95D052</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>

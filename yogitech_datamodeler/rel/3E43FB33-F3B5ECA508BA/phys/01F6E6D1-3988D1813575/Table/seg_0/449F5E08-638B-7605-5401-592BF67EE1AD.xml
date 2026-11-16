@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="migrations" directorySegmentName="seg_0" id="449F5E08-638B-7605-5401-592BF67EE1AD">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="migration" id="1C55FB45-8C42-35DA-B1D8-9C2B4D9E94FF">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ran_at" id="44D10018-6AE4-6436-E4D3-B8DF8F97EECE">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id" id="7C728582-5D69-11C8-E579-54B2F9778934">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="migrations_pk" id="A4ABF46E-46D9-AFE5-F22B-48D2361A5581">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="migrations_migration_uk" id="99BFB171-E96E-6EE3-B6D9-126CBD11F248">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:19:29 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev12c>

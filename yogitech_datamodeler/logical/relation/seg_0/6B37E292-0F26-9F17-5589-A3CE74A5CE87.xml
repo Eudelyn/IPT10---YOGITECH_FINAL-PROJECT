@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="buyers make payments" directorySegmentName="seg_0" id="6B37E292-0F26-9F17-5589-A3CE74A5CE87">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:21:58 UTC</createdTime>
+<generatorID>92C0A754-2295-D7BB-0A3E-387AD0B173B0</generatorID>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<engineerTo>
+<item key="3E43FB33-1817-8B84-5AA8-F3B5ECA508BA" value="true"/>
+</engineerTo>
+<sourcePk>B60EE269-0D7D-A81B-A1B1-5A81BDF36166</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>FDE5FE0D-DA9A-89E3-85D9-8815FC949435</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>31D2AEB2-8259-CF28-5723-FC24943FF68A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>

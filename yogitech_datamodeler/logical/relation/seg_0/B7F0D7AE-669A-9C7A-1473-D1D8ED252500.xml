@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="users redeem vouchers" directorySegmentName="seg_0" id="B7F0D7AE-669A-9C7A-1473-D1D8ED252500">
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:21:58 UTC</createdTime>
+<generatorID>B4F1AFB3-FAA8-40E5-080D-D2B8A991D723</generatorID>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<engineerTo>
+<item key="3E43FB33-1817-8B84-5AA8-F3B5ECA508BA" value="true"/>
+</engineerTo>
+<sourcePk>B60EE269-0D7D-A81B-A1B1-5A81BDF36166</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>FDE5FE0D-DA9A-89E3-85D9-8815FC949435</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>3332FCE2-E841-17E7-84AE-C23F6024DD58</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>

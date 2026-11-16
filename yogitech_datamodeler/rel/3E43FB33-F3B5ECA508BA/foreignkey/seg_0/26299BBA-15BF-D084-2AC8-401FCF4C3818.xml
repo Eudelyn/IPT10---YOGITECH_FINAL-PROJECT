@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="26299BBA-15BF-D084-2AC8-401FCF4C3818" containerWithKeyObject="1F3624D3-B2A3-871E-1C60-91EDA7F8DFCA" localFKIndex="FFA2EAD5-0877-B5D5-0890-DC84AA65D227" name="orders_have_email_logs">
+<sourceDDLFile>yogitech.ddl</sourceDDLFile>
+<createdBy>Eudelyn</createdBy>
+<createdTime>2026-11-16 10:12:47 UTC</createdTime>
+<ownerDesignName>yogitech_erd</ownerDesignName>
+<importedID>7306BAFA-924B-47E9-50DE-903FB138E4DC</importedID>
+<referredTableLongName>orders</referredTableLongName>
+<deleteRule>SET NULL</deleteRule>
+<referredTableID>8CD97621-3AC9-8FC2-8236-EE3A43133F0B</referredTableID>
+<keyObject>3D1C14BC-272F-F2B1-5EE0-8F0963576C9D</keyObject>
+<referredKeyID>3D1C14BC-272F-F2B1-5EE0-8F0963576C9D</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

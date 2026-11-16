@@ -1,0 +1,8 @@
+# Allows http://localhost/yogitech/ on XAMPP by forwarding to /public.
+# Blocks direct access to app code, .env, storage, etc.
+Options -Indexes
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(\.env|\.git|app/|core/|config/|routes/|database/|storage/|tests/|bootstrap\.php$|yogi$) - [F,L]
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>

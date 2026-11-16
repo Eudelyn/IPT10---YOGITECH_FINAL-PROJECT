@@ -1,0 +1,264 @@
+#!/usr/bin/env php
+<?php
+/**
+ * Yogi CLI — php yogi <command>
+ */
+declare(strict_types=1);
+
+require __DIR__ . '/bootstrap.php';
+
+use Core\Database;
+
+$cmd = $argv[1] ?? 'help';
+$out = static function (string $msg): void { fwrite(STDOUT, $msg . PHP_EOL); };
+$err = static function (string $msg): void { fwrite(STDERR, "\033[31m$msg\033[0m" . PHP_EOL); };
+
+function migrationFiles(): array
+{
+    $files = glob(BASE_PATH . '/database/migrations/*.sql') ?: [];
+    sort($files);
+    return $files;
+}
+
+function runSqlFile(PDO $pdo, string $file): void
+{
+    $sql = (string) file_get_contents($file);
+    foreach (preg_split('/;\s*(\r?\n|$)/', $sql) as $statement) {
+        $statement = trim($statement);
+        if ($statement !== '' && !preg_match('/^(--[^\n]*\s*)+$/', $statement)) {
+            $pdo->exec($statement);
+        }
+    }
+}
+
+function migrate(callable $out): void
+{
+    $db = config('database.database');
+    Database::connection(false)->exec("CREATE DATABASE IF NOT EXISTS `$db` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
+    $pdo = Database::connection();
+    $pdo->exec('CREATE TABLE IF NOT EXISTS migrations (id INT AUTO_INCREMENT PRIMARY KEY, migration VARCHAR(190) NOT NULL UNIQUE, ran_at DATETIME NOT NULL)');
+    $done = array_column(Database::select('SELECT migration FROM migrations'), 'migration');
+    $count = 0;
+    foreach (migrationFiles() as $file) {
+        $name = basename($file);
+        if (in_array($name, $done, true)) {
+            continue;
+        }
+        runSqlFile($pdo, $file);
+        Database::insert('migrations', ['migration' => $name, 'ran_at' => date('Y-m-d H:i:s')]);
+        $out("  migrated  $name");
+        $count++;
+    }
+    $out($count ? "Done: $count migration(s)." : 'Nothing to migrate.');
+}
+
+/**
+ * Rebuilds anything missing from the database (tables, columns, default rows) without
+ * touching existing data. Fixes half-finished phpMyAdmin imports.
+ */
+function repair(callable $out): void
+{
+    foreach (Core\SchemaRepair::run() as $line) {
+        $out((strpos($line, 'Repaired') === 0 || strpos($line, 'Database is') === 0) ? $line : '  ' . $line);
+    }
+}
+
+/** Sets KEY=value in .env (adds the line if missing). */
+function setEnv(string $key, string $value): void
+{
+    $file = BASE_PATH . '/.env';
+    $env = is_file($file) ? (string) file_get_contents($file) : '';
+    $line = $key . '=' . $value;
+    $pattern = '/^' . preg_quote($key, '/') . '=.*$/m';
+    $env = preg_match($pattern, $env)
+        ? preg_replace_callback($pattern, static fn() => $line, $env)
+        : rtrim($env) . PHP_EOL . $line . PHP_EOL;
+    file_put_contents($file, $env);
+}
+
+/**
+ * Gmail API sign-in (OAuth "desktop app" loopback flow):
+ * opens Google's consent page, catches the redirect on http://127.0.0.1:<port>,
+ * exchanges the code for a refresh token and saves it in .env.
+ */
+function gmailAuth(callable $out, callable $err, int $port): void
+{
+    $c = (array) config('mail.gmail');
+    if (($c['client_id'] ?? '') === '' || ($c['client_secret'] ?? '') === '') {
+        $err('Set GMAIL_CLIENT_ID and GMAIL_CLIENT_SECRET in .env first (README → "Gmail API").');
+        exit(1);
+    }
+    $redirect = 'http://127.0.0.1:' . $port;
+    $state = bin2hex(random_bytes(12));
+    $url = $c['auth_url'] . '?' . http_build_query([
+        'client_id' => $c['client_id'], 'redirect_uri' => $redirect, 'response_type' => 'code',
+        'scope' => $c['scope'], 'access_type' => 'offline', 'prompt' => 'consent', 'state' => $state,
+    ]);
+
+    $server = @stream_socket_server('tcp://127.0.0.1:' . $port, $errno, $errstr);
+    if (!$server) {
+        $err("Port $port is busy ($errstr). Try: php yogi gmail:auth 8799");
+        exit(1);
+    }
+    $out('1) Sign in with the Gmail account that should send Yogitech emails.');
+    $out('2) If Google warns "Google hasn\'t verified this app", click Advanced → Go to (your app). It\'s your own app.');
+    $out('');
+    $out('Opening your browser. If it doesn\'t open, copy this link into it:');
+    $out($url);
+    $out('');
+    if (PHP_OS_FAMILY === 'Windows') {
+        pclose(popen('start "" ' . escapeshellarg($url), 'r'));
+    } elseif (PHP_OS_FAMILY === 'Darwin') {
+        exec('open ' . escapeshellarg($url) . ' >/dev/null 2>&1 &');
+    } else {
+        exec('xdg-open ' . escapeshellarg($url) . ' >/dev/null 2>&1 &');
+    }
+    $out('Waiting for Google (5 minutes)...');
+
+    $conn = @stream_socket_accept($server, 300);
+    if (!$conn) {
+        $err('Timed out. Run php yogi gmail:auth again.');
+        exit(1);
+    }
+    $request = (string) fgets($conn);
+    preg_match('#^GET\s+(\S+)#', $request, $m);
+    parse_str((string) parse_url($m[1] ?? '/', PHP_URL_QUERY), $q);
+    $ok = isset($q['code']) && hash_equals($state, (string) ($q['state'] ?? ''));
+    $page = $ok ? '<h2>Yogitech is connected to Gmail.</h2><p>You can close this tab and go back to the terminal.</p>'
+                : '<h2>Sign-in didn\'t finish.</h2><p>' . htmlspecialchars((string) ($q['error'] ?? (isset($q['code']) ? 'Security check failed (state mismatch)' : 'Missing code'))) . '. Go back to the terminal and try again.</p>';
+    fwrite($conn, "HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=utf-8\r\nConnection: close\r\n\r\n<!doctype html><body style=\"font-family:sans-serif;padding:2rem\">$page</body>");
+    fclose($conn);
+    fclose($server);
+    if (!$ok) {
+        $err('Google sign-in was cancelled or failed: ' . ($q['error'] ?? (isset($q['code']) ? 'security check failed (state mismatch)' : 'no code returned')));
+        exit(1);
+    }
+
+    $res = (new Core\HttpClient(20, 1))->postForm((string) $c['token_url'], [
+        'code' => $q['code'], 'client_id' => $c['client_id'], 'client_secret' => $c['client_secret'],
+        'redirect_uri' => $redirect, 'grant_type' => 'authorization_code',
+    ]);
+    $refresh = (string) ($res['json']['refresh_token'] ?? '');
+    if (!$res['ok'] || $refresh === '') {
+        $err('Google didn\'t return a refresh token: ' . ($res['json']['error_description'] ?? $res['json']['error'] ?? $res['error'] ?? 'unknown error'));
+        $err('If you connected before, remove the app at https://myaccount.google.com/permissions and run this again.');
+        exit(1);
+    }
+    setEnv('GMAIL_REFRESH_TOKEN', $refresh);
+    setEnv('MAIL_DRIVER', 'gmail');
+    Core\Cache::forget('gmail_access_token');
+    $out('Saved GMAIL_REFRESH_TOKEN and set MAIL_DRIVER=gmail in .env.');
+    $out('Test it:  php yogi mail:test your-other-email@gmail.com');
+}
+
+try {
+    switch ($cmd) {
+        case 'serve':
+            $port = $argv[2] ?? '8000';
+            $out("Yogitech running at http://127.0.0.1:$port  (Ctrl+C to stop)");
+            passthru(escapeshellarg(PHP_BINARY) . " -S 127.0.0.1:$port -t " . escapeshellarg(BASE_PATH . '/public') . ' ' . escapeshellarg(BASE_PATH . '/public/index.php'));
+            break;
+
+        case 'migrate':
+            migrate($out);
+            break;
+
+        case 'migrate:fresh':
+            $db = config('database.database');
+            Database::connection(false)->exec("DROP DATABASE IF EXISTS `$db`");
+            $out("Dropped database `$db`.");
+            migrate($out);
+            break;
+
+        case 'seed':
+            (new \Database\seeds\DatabaseSeeder($out))->run();
+            break;
+
+        case 'setup':
+            $db = config('database.database');
+            Database::connection(false)->exec("DROP DATABASE IF EXISTS `$db`");
+            migrate($out);
+            $out('Seeding…');
+            (new \Database\seeds\DatabaseSeeder($out))->run();
+            $out(PHP_EOL . 'Ready. Start the app with:  php yogi serve');
+            break;
+
+        case 'import':
+            $slug = $argv[2] ?? '';
+            $email = $argv[3] ?? (string) Core\Database::scalar("SELECT email FROM users WHERE role = 'seller' ORDER BY id LIMIT 1");
+            $cat = App\Models\Category::firstWhere('slug', $slug);
+            $seller = App\Models\User::firstWhere('email', $email);
+            if (!$cat || !$seller || $seller['role'] !== 'seller') {
+                $err('Usage: php yogi import <smartphones|laptops|tablets|accessories> [seller-email]');
+                exit(1);
+            }
+            $r = (new App\Services\ProductApiService())->importCategory((int) $seller['id'], $cat);
+            $out("Imported {$r['imported']} new, updated {$r['updated']} (rate ₱{$r['rate']}/USD).");
+            break;
+
+        case 'db:repair':
+            repair($out);
+            break;
+
+        case 'routes':
+            $app = new Core\App();
+            foreach ($app->router()->routes() as $r) {
+                $h = is_array($r['handler']) ? substr(strrchr($r['handler'][0], '\\'), 1) . '@' . $r['handler'][1] : 'Closure';
+                $out(sprintf('%-6s %-34s %-38s %s', $r['method'], $r['path'], $h, implode(',', $r['middleware'])));
+            }
+            break;
+
+        case 'sql:build':
+            $sql = "-- Yogitech database schema (generated by: php yogi sql:build)\n"
+                . "CREATE DATABASE IF NOT EXISTS `yogitech` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;\nUSE `yogitech`;\n\n";
+            foreach (migrationFiles() as $f) {
+                $sql .= '-- ' . basename($f) . "\n" . trim((string) file_get_contents($f)) . "\n\n";
+            }
+            file_put_contents(BASE_PATH . '/database/schema.sql', $sql);
+            $out('Wrote database/schema.sql');
+            break;
+
+        case 'mail:test':
+            $to = $argv[2] ?? '';
+            if (!filter_var($to, FILTER_VALIDATE_EMAIL)) {
+                $err('Usage: php yogi mail:test you@example.com');
+                exit(1);
+            }
+            $html = Core\View::render('emails/welcome', ['name' => 'Yogitech tester', 'seller' => false, 'cta' => absolute_url('/')], 'emails/layout');
+            $r = Core\Mailer::send($to, '', 'Yogitech test email', $html, '', ['type' => 'test']);
+            $out('Driver: ' . config('mail.driver') . ' -> ' . $r['status'] . ($r['error'] ? ' (' . $r['error'] . ')' : ''));
+            if ($r['status'] === 'logged') {
+                $out('MAIL_DRIVER=log saves emails to storage/mail/ instead of sending. Set gmail, mailtrap, brevo or smtp in .env.');
+            }
+            break;
+
+        case 'gmail:auth':
+            gmailAuth($out, $err, (int) ($argv[2] ?? 8765));
+            break;
+
+        case 'test':
+            require BASE_PATH . '/tests/run.php';
+            break;
+
+        default:
+            $out(<<<TXT
+Yogi CLI (Yogitech)
+  php yogi setup            Fresh database + demo data (recommended first run)
+  php yogi serve [port]     Start the dev server (default 8000)
+  php yogi migrate          Run pending migrations
+  php yogi migrate:fresh    Drop and recreate all tables
+  php yogi seed             Seed demo users, API products and sample orders
+  php yogi import <cat> [seller-email]   Import a category from DummyJSON
+  php yogi routes           List all routes
+  php yogi gmail:auth         One-time Gmail API sign-in; saves GMAIL_REFRESH_TOKEN to .env
+  php yogi db:repair          Create missing tables/columns (fixes a half-finished import), keeps data
+  php yogi mail:test <email>  Send a test email with the current MAIL_DRIVER
+  php yogi test             Run unit tests
+  php yogi sql:build        Regenerate database/schema.sql from migrations
+TXT);
+    }
+} catch (PDOException $e) {
+    $err('Database error: ' . $e->getMessage());
+    $err('Check the DB_ settings (.env, or docker-compose.yml when using Docker) and that MySQL is running.');
+    exit(1);
+}
